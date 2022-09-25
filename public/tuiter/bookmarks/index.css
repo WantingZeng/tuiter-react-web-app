@@ -1,0 +1,115 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: "Noto Sans Caucasian Albanian";
+}
+.wb-body-border{
+    border: solid rgb(47,51,54);
+}
+.wb-padding-left{
+    padding-left: 16px;
+}
+.wb-padding-left-12{
+    padding-left: 12px;
+}
+.wb-padding-top{
+    padding-top: 12px;
+}
+.wb-padding-bottom{
+    padding-bottom: 12px;
+}
+.wb-padding-right{
+    padding-right: 12px;
+}
+.wb-content{
+    width: 506px;
+    margin-bottom: 12px;
+    margin-right: 16px;
+}
+.wb-border-bottom{
+    border-bottom: solid 1px rgb(110,118,125);
+}
+.wb-border-thin{
+    border: solid 1px rgb(110,118,125);
+}
+.wb-title{
+    font-size: 20px;
+    color: white;
+    margin: 0px;
+}
+.wb-handle-use{
+    color: rgb(110,118,125);
+    font-size: 13px;
+    margin: 0px;
+}
+.wb-avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+.wb-float-left{
+    float: left;
+}
+.wb-float-right{
+    float:right;
+}
+.wb-float-done{
+    clear:both;
+}
+.wb-display-inline{
+    display: inline;
+}
+.wb-fontsize-15{
+    font-size: 15px;
+}
+.wb-color-lightgray{
+    color: rgb(110,118,125);
+}
+.wb-image{
+    width: 504px;
+    height: 264px;
+}
+.wb-border-around-top{
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+}
+.wb-border-around-bottom{
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.wb-image-below-title{
+    font-size: 15px;
+    margin: 0px;
+}
+.wb-image-below-text{
+    font-size: 15px;
+    margin: 0px;
+    color: rgb(110,118,125);
+    width: 506px;
+}
+.wb-padding-all{
+    padding: 12px;
+}
+.wb-width-limited{
+    width: 506px;
+}
+
+.wb-icons{
+    display: inline-block;
+    font-size: 20px;
+    color: rgb(110,118,125);
+    padding: 12px;
+    text-decoration: none;
+}
+
+.wb-icon-red{
+    color: red;
+    text-decoration: none;
+    padding: 12px;
+}
+.wb-icon-gray{
+    color: rgb(110,118,125);
+    text-decoration: none;
+    padding: 12px;
+
+}
