@@ -5,22 +5,17 @@
 /*}*/
 
 
-/*@media (min-width: 1400px)*/
-/*and (max-width: 1800px) {*/
-/*    body {*/
-/*        background-color: black;*/
-/*        color: gray;*/
-/*    }*/
+@media (min-width: 1400px)
+and (max-width: 1800px) {
+    body {
+        background-color: black;
+        color: gray;
+    }
     /*.media-query {*/
     /*    background-color: blue;*/
     /*    color: white;*/
     /*}*/
-/*}*/
-
-.list-group.override-size{
-    font-size: x-small;
 }
-
 .nav-tabs.override-border{
     border-color: gray;
 }
