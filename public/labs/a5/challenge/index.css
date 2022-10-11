@@ -1,0 +1,195 @@
+/*body {*/
+/*    background-color: black;*/
+/*    color: gray;*/
+/*    border:solid rgb(47,51,54);*/
+/*}*/
+
+
+@media (min-width: 1400px)
+and (max-width: 1800px) {
+    body {
+        background-color: black;
+        color: gray;
+    }
+    /*.media-query {*/
+    /*    background-color: blue;*/
+    /*    color: white;*/
+    /*}*/
+}
+.nav-tabs.override-border{
+    border-color: gray;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.override-active{
+    color: white;
+    background-color: black;
+    font-weight: 900;
+    border-bottom-color: blue;
+    border-bottom-width: medium;
+}
+.nav-link.override-style{
+    color: gray;
+    padding: 0.5rem 1.5rem;
+
+}
+
+.wb-search-tuiter-position{
+    bottom:7px;
+    left:45px;
+}
+
+.wb-gear-setting{
+    color: blue;
+    font-size: larger;
+}
+
+.list-group.override-border{
+    border-radius: 1.5rem;
+}
+.list-group-item.override-bg{
+    background-color: black;
+    color: white;
+}
+.list-group-item.override-bg-gray{
+    background-color: rgb(47,51,54);
+    color: white;
+    border-color: rgb(47,51,54);
+
+}
+.list-group-item.active.override-selected{
+    background-color: black;
+    border: none;
+    font-weight:900;
+}
+.form-control.override-search{
+    background-color: rgb(47,51,54);
+    border-color: rgb(47,51,54);
+}
+
+.btn-primary.override-btn{
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wb-padding-left{
+    padding-left: 16px;
+}
+
+.wb-border-color{
+    border: solid rgb(47,51,54);
+}
+
+.wb-border-bottom{
+    border-bottom: solid 16px rgb(47,51,54);
+}
+
+.wb-navigate-tabs {
+    color: rgb(29,161,242);
+    font-family: "Arial Rounded MT Bold";
+    padding: 0px;
+}
+.wb-navigate-tabs li{
+    list-style-type: none;
+    display: inline-block;
+    font-size: 15px;
+    color: rgb(110,118,125);
+}
+.wb-navigate-tabs .wb-selected {
+    border-bottom: solid 4px rgb(29,161,242);
+
+    color: rgb(29,161,242);
+    text-decoration-line: none;
+    padding: 16px;
+}
+.wb-navigate-tabs .wb-no-selected {
+    color: rgb(110,118,125);
+    text-decoration-line: none;
+    padding: 16px;
+}
+
+
+
+.border-color{
+    border-color: rgb(47,51,54);
+}
+.wb-search-block{
+    border: none;
+    border-radius: 10px;
+    background-color: darkgrey;
+    width: 60%;
+    padding: 5px;
+    margin-left: 16px;
+}
+
+.wb-topic-font{
+    font-size: 13px;
+    color: rgb(110,118,125);
+    padding-left: 16px;
+    padding-top: 16px;
+    margin: 0px;
+}
+.wb-title-font{
+    padding-left: 16px;
+    padding-top: 0px;
+    margin: 0px;
+}
+.wb-number-tuits-font{
+    font-size: 13px;
+    color: rgb(110,118,125);
+    padding-left: 16px;
+    margin: 0px;
+}
+.wb-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    border-left: 16px;
+    margin: 16px;;
+}
+.wb-name-of-author{
+    color:white;
+    padding-left: 16px;
+    padding-top: 16px;
+    margin: 0px;
+}
+.wb-name-of-author-post{
+    color:white;
+    padding-left: 16px;
+    margin: 0px;
+}
+.wb-float-done{
+    clear: both;
+}
+.wb-float-left{
+    float: left;
+}
+
+.wb-float-right{
+    float: right;
+}
+.wb-float-top{
+    float: top;
+}
+.wb-float-bottom{
+    float: bottom;
+}
+.wb-pos-fixed {
+    position: fixed;
+    right: 16px;
+}
