@@ -1,4 +1,4 @@
-import WhoToFollowList from "./WhoToFollowList";
+import WhoToFollowList from "./WhoToFollowList/index.js";
 import ExploreComponent from "./ExploreScreen/ExploreComponent.js";
 function init(){
     $('#wd-explore').append(`
