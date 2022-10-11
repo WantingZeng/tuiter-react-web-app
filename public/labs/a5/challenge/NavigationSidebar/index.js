@@ -1,3 +1,11 @@
+console.log(window.location.pathname)
+//
+// const open = window.open("/tuiter-react-web-app/public/labs/a5/challenge/home.html",
+//                          "_blank")
+// const getId = $("#home");
+// console.log(getId)
+
+
 function NavigationSidebar(){
     return (`
     <ul class="list-group">
@@ -6,13 +14,13 @@ function NavigationSidebar(){
             <i class="fab fa-twitter"></i>
         </li>
        <nav>
-       <a href="/tuiter-react-web-app/public/labs/a5/challenge/exploreHome.html" 
-       class="list-group-item active" >
+       <a href="/labs/a5/challenge/home.html" class="list-group-item active">
             <i class="fas fa-home"></i>
             Home
         </a>
 
-        <a href="/tuiter-react-web-app/public/tuiter/explore/index.html" class="list-group-item ">
+        <a href="/tuiter/explore/index.html" 
+        class="list-group-item ">
             <i class="fas fa-hashtag"></i>
             Explore
         </a>
