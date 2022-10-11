@@ -1,5 +1,5 @@
 const TodoItem = (todo) => {
-    return(`
+    return (`
        <li>
       <input type="checkbox"
         ${todo.done ? 'checked' : ''}/>
@@ -7,7 +7,7 @@ const TodoItem = (todo) => {
       (${todo.status})
     </li>`
 
-        );
+    );
 }
 export default TodoItem;
 
