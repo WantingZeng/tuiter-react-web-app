@@ -19,6 +19,7 @@ const WhoToFollowListItem = (
                     <button className="btn btn-primary rounded-pill float-end">Follow</button>
                 </div>
             </div>
+
         </li>
     );
 };
