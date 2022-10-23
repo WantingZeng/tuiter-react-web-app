@@ -1,7 +1,6 @@
 import React from "react";
 import {useSelector} from "react-redux";
 import TuitsItem from "../TuitsItem";
-import {useDispatch} from "react-redux";
 
 
 
