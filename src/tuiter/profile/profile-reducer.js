@@ -1,34 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 import profiles from './profiles.json';
 
-const currentProfile = {
-    "firstName": "Jose",
-    "lastName": "Annunziato",
-    "bio": "Faculty, Software Engineer, AI, Space, and renewable enthusiast. Retuits and likes are not endorsements.",
-    "website": "youtube.com/webdevt",
-    "location": "Boston, MA",
-};
-
-const templateProfile = {
-    ...currentProfile
-
-}
-
 
 const profileSlice = createSlice({
     name: 'profiles',
+    // name: 'profile'
     initialState: profiles,
 
-    reducers:{
+    reducers: {
+        profileUpdate(state, action) {
+            //const {_id, name, bio, website, location, dateOfBirth} = action.payload
 
-        editProfile(state, action){
-
+            return state=action.payload
         }
 
     }
+});
 
-
-
-                                 });
-export const {editProfile} = profileSlice.actions;
+export const {profileUpdate} = profileSlice.actions;
 export default profileSlice.reducer;

@@ -5,7 +5,7 @@ import {useDispatch} from "react-redux";
 
 const WhatsHappening = () => {
     let [whatsHappening, setWhatsHappening] = useState('');
-
+    console.log(useState(""))
     const dispatch = useDispatch();
 
 

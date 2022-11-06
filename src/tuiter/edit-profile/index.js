@@ -1,15 +1,44 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
-import {editProfile} from "../profile/profile-reducer";
+import {profileUpdate} from "../profile/profile-reducer";
 import {useDispatch} from "react-redux";
 import {useSelector} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
 const EditProfile = () => {
+    //const {profileId} = useParams()
+    //console.log({profileId})
+    const profile = useSelector(state => state.profiles)
+    // console.log(profile)
+    let [name, setName] = useState(profile.name);
+    //console.log(useState(profile[0].firstName))
+    //let [lastName, setLastName] = useState(profile[0].lastName + profile[0].firstName);
+    let [bio, setBio] = useState(profile.bio);
+    let [location, setLocation] = useState(profile.location);
+    let [website, setWebsite] = useState(profile.website);
+    let [dateOfBirth, setDateOfBirth] = useState(profile.dateOfBirth);
 
-    const dispatch = useDispatch();
-    const editProfileHandler = () =>{
-        dispatch((editProfile));
+
+    const dispatch = useDispatch()
+    const history = useNavigate()
+
+
+    const profileUpdateHandler = () => {
+        const newProfile = {
+            ...profile,
+            id: profile._id,
+            name:name,
+            bio: bio,
+            website: website,
+            location: location
+        }
+        dispatch(profileUpdate(newProfile));
+        console.log(newProfile);
+        history(`../profile`)
+
     }
+
+
     return(
         <>
             <div className="row">
@@ -20,8 +49,8 @@ const EditProfile = () => {
                     <h5 className="fw-bold">Edit Profile</h5>
                 </div>
                 <div className="col-auto">
-                    <Link to="/tuiter/profile" className="btn border rounded-5 bg-black text-white fw-bold"
-                    onClick={() => editProfileHandler()}>Save</Link>
+                    <button className="btn border rounded-5 bg-black text-white fw-bold"
+                    onClick={profileUpdateHandler}>Save</button>
                 </div>
                 <div className="position-relative">
                     <img src={require(`../image/background.jpeg`)} width="100%"/>
@@ -43,31 +72,33 @@ const EditProfile = () => {
                     <br/>
                     <div className="form-floating mb-3">
                         <input type="name" className="form-control" id="inputName"
-                               placeholder="firstname lastname">
+                               placeholder="firstName lastName"
+                               value= {name} onChange={(event) => setName(event.target.value)}
+                               >
                         </input>
                             <label htmlFor="inputName">Name</label>
                     </div>
                     <div className="form-floating mb-3">
                         <textarea className="form-control" placeholder="Leave bios here"
-                                  id="inputBio" style={{height:100}}></textarea>
+                                  id="inputBio" style={{height:100}} value={bio} onChange={(event) => setBio(event.target.value)}></textarea>
                         <label htmlFor="inputBio">Bio</label>
                     </div>
                     <div className="form-floating mb-3">
-                        <input type="location" className="form-control" id="inputLocation"
-                               placeholder="boston">
+                        <input value={location} type="location" className="form-control" id="inputLocation"
+                               placeholder="boston" onChange={(event) => setLocation(event.target.value)}>
                         </input>
                         <label htmlFor="inputLocation">Location</label>
                     </div>
                     <div className="form-floating mb-3">
                         <input type="website" className="form-control" id="inputWebsite"
-                               placeholder="website.com">
+                               placeholder="website.com" value={website} onChange={(event) => setWebsite(event.target.value)}>
                         </input>
                         <label htmlFor="inputWebsite">Website</label>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="inputBirth">Birth Date</label>
                         <input type="birthday" className="form-control" id="inputBirth"
-                               placeholder="MM/DD/YY">
+                               placeholder="MM/DD/YY" value={dateOfBirth} onChange={(event) => setDateOfBirth(event.target.value)}>
                         </input>
                     </div>
                     <div className="row mb-lg-5">

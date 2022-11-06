@@ -1,8 +1,6 @@
-[
-  {
-    "_id": 123,
-    "firstName": "Jose",
-    "lastName": "Annunziato",
+
+  {"_id": 123,
+    "name": "Jose Annunziato",
     "handle": "@jannunzi",
     "profilePicture": "jose.png",
     "bannerPicture": "polyglot.png",
@@ -15,4 +13,3 @@
     "followersCount": 223,
     "tuitsCount": 6114
   }
-]

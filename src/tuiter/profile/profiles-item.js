@@ -1,16 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
-import { deleteProfile} from "./profile-reducer";
 import {useDispatch, useSelector} from "react-redux";
+import {profileUpdate} from "./profile-reducer";
 
 
 
-const profilesItem = (
+const ProfilesItem = (
     {
         person = {
             "_id": 123,
-            "firstName": "Jose",
-            "lastName": "Annunziato",
+            "name": "Jose Annunziato",
             "handle": "@jannunzi",
             "profilePicture": "jose.png",
             "bannerPicture": "polyglot.png",
@@ -24,9 +23,12 @@ const profilesItem = (
             "tuitsCount": 6114
 }}
 ) => {
-
-
-
+    const profile = useSelector(state => state.profiles)
+    console.log(profile)
+    const dispatch = useDispatch();
+    const updateProfileHandler = (id) => {
+        dispatch(profileUpdate(id));
+    }
 
     return(
         <div className="border border-opacity-25 rounded-3">
@@ -36,10 +38,10 @@ const profilesItem = (
                 </div>
                 <div className="col-10">
                     <div>
-                        <h5>{person.firstName} {person.lastName}</h5>
+                        <h5>{profile.name}</h5>
                     </div>
                     <div className="text-secondary">
-                        {person.tuitsCount} Tuits
+                        {profile.tuitsCount} Tuits
                     </div>
                 </div>
             </div>
@@ -56,34 +58,34 @@ const profilesItem = (
             </div>
 <br/>
             <div>
-                <h4 className="fw-bold">{person.firstName} {person.lastName}</h4>
-                <h6 className="text-secondary">{person.handle}</h6>
+                <h4 className="fw-bold">{profile.name}</h4>
+                <h6 className="text-secondary">{profile.handle}</h6>
             </div>
             <div>
-                {person.bio}
+                {profile.bio}
             </div>
             <br/>
             <div className="row text-secondary">
                 <div className="col-4">
                     <i className="bi bi-geo-alt"></i>
-                    {person.location}
+                    {profile.location}
                 </div>
                 <div className="col-4">
                     <i className="bi bi-balloon"></i>
-                    Born {person.dateOfBirth}
+                    Born {profile.dateOfBirth}
                 </div>
                 <div className="col-4">
                     <i className="bi bi-calendar3"></i>
-                    Joined {person.dateJoined}
+                    Joined {profile.dateJoined}
                 </div>
             </div>
             <br/>
             <div className="row text-secondary">
                 <div className="col-auto">
-                    <span className="text-black">{person.followingCount}</span>  Following
+                    <span className="text-black">{profile.followingCount}</span>  Following
                 </div>
                 <div className="col-auto">
-                    <span className="text-black">{person.followersCount}</span> Followers
+                    <span className="text-black">{profile.followersCount}</span> Followers
                 </div>
 
             </div>
@@ -93,4 +95,4 @@ const profilesItem = (
     );
 
 };
-export default profilesItem
+export default ProfilesItem

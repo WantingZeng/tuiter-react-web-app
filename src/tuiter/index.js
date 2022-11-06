@@ -6,13 +6,15 @@ import {Routes, Route} from "react-router";
 import HomeComponent from "./home";
 import whoReducer from "./who-to-follow-list/who-reducer";
 import tuitsReducer from "./tuits/tuits-reducer";
+import profileReducer from "./profile/profile-reducer";
 import { configureStore } from '@reduxjs/toolkit';
 import {Provider} from "react-redux";
 import ProfileComponent from "./profile";
 import EditProfile from "./edit-profile";
 
+
 const store = configureStore(
-    {reducer: {who: whoReducer,tuits: tuitsReducer}});
+    {reducer: {who: whoReducer,tuits: tuitsReducer, profiles: profileReducer}});
 
 
 function Tuiter() {
