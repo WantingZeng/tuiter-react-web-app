@@ -1,4 +1,6 @@
 import React from "react";
+import {updateTuit} from "../../../services/tuits-service";
+import {useDispatch} from "react-redux";
 
 const TuitStats = (
     {
@@ -17,6 +19,8 @@ const TuitStats = (
         }}
 ) => {
 
+    const dispatch = useDispatch();
+
     return(
         <div className="row">
             <ul className="nav mb-2 ">
@@ -28,7 +32,8 @@ const TuitStats = (
                 </li>
                 <li className="nav-item col-3">
                     <a className="nav-link text-secondary" href="#">
-                        <i className="bi bi-reply"></i> {tuit.replies}
+                        <i className="bi bi-reply"></i>
+                        {tuit.replies}
                     </a>
                 </li>
                 <li className="nav-item col-3">
@@ -36,7 +41,15 @@ const TuitStats = (
                     <a className="nav-link text-secondary fg-color-red" href="#">
                         <i className={tuit.liked? `bi bi-heart-fill ` : `bi bi-heart`} style={tuit.liked? {color:"red"}: {color:""}}>
                         {/*<i className="bi bi-heart" style={tuit.liked?{fill:"red"}:{color:""}}>*/}
-                        </i> {tuit.likes}
+                        </i>
+                        {tuit.likes}
+                        <div>
+                             Likes: {tuit.likes}
+                            <i onClick={() => updateTuit(dispatch, {
+                                ...tuit,
+                                likes: tuit.likes + 1
+                            })} className="far fa-thumbs-up ms-2"></i>
+                        </div>
                     </a>
                 </li>
                 <li className="nav-item col-3">
