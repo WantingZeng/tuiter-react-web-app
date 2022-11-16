@@ -25,7 +25,7 @@ const TuitsItem = (
 
     const dispatch = useDispatch();
     const deleteTuitHandler = (id) => {
-        dispatch(deleteTuitThunk(id));
+       dispatch(deleteTuitThunk(id));
     }
 
     return(
@@ -37,7 +37,7 @@ const TuitsItem = (
                     <div className="col-10">
                         <div>
                             <i className="bi bi-x-lg float-end"
-                               onClick={() => deleteTuitHandler(tuit._id)}></i>
+                               onClick={() =>deleteTuitHandler(tuit)}></i>
                   <span>
                         {tuit.userName}
                       <i className="bi bi-check-circle-fill"></i>
